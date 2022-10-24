@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando estudos com DOM</title>
+    <style>
+        body{
+            color: #fff;
+            background: rgb(92, 92, 231);
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o Resultado</p>
+    <p>Aprenda a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="abc">Click me</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] // use [] para indicar qual paragrafo que selecionar 
+
+        p1.style.background = 'green'
+
+        corpo.style.background = 'black'
+
+        var d = window.document.querySelector('div.abc') // o . indica que classe a # indica que é um id.
+
+        d.style.background = 'purple'
+
+        // window.document.write()
+        // var d = window.document.getElementsByClassName('click')
+        // d.style.background = 'red'
+
+    </script>
+</body>
+</html>
