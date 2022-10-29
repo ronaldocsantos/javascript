@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Somando Valores</h1>
+
+    <div class="input">
+        <input class="n1" type="number" name="txtn1" id="txtn1">
+        <input class="n2" type="number" name="txtn2" id="txtn2">
+        <input class="botao" type="button" value="Somar" onclick="somar ()"> <!-- O onclick (referese a um dos muitos elementos de DOM) indica que quando clicarmos em "somar" ação acontecera mediante ao que for especificado na função dentro do scritp-->
+    </div>
+
+    <div class="res" id="res">Resultado</div>
+
+    <script>
+
+        function somar() {
+            var tn1 = window.document.querySelector('input#txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            //abaixo faz a conversao para numeros, se não fizer a função irá concatenar ao inves de somar.
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value) 
+            var s = n1 + n2
+            res.innerHTML =  s
+        }
+    </script>
+</body>
+</html>
